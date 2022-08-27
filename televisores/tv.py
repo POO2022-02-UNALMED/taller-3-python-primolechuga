@@ -62,6 +62,5 @@ class TV:
         if self._estado==True:
             if self._volumen>0 and self._volumen<=7:
                 self._volumen-=1
-    
-
-    
+    def getControl(self):
+        return self._control

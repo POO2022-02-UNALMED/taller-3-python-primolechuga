@@ -7,9 +7,9 @@ class Control:
     def enlazar(self, TV):
         TV._control=self
         self._tv=TV
-    def getTV(self):
+    def getTv(self):
         return self._tv
-    def setTV(self, TV):
+    def setTv(self, TV):
         self._tv=TV
 
     def setVolumen(self, volumen):
