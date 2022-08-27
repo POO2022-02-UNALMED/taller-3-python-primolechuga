@@ -30,7 +30,7 @@ class TV:
     def getEstado(self):
         return self._estado
     def setVolumen(self, volumen):
-        if (self._estado==True) and (volumen<=0 and volumen<=7):
+        if (self._estado==True) and (volumen>=0 and volumen<=7):
             self._volumen=volumen
     def getVolumen(self):
         return self._volumen
