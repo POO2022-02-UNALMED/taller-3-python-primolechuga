@@ -1,4 +1,7 @@
 
+from televisores.marca import Marca
+from televisores.control import Control
+
 class TV:
     _numTV=0
     def __init__(self,marca,estado):
@@ -30,13 +33,13 @@ class TV:
     def getEstado(self):
         return self._estado
     def setVolumen(self, volumen):
-        if self._estado==True and (volumen<=0 and volumen<=7):
+        if (self._estado==True) and (volumen<=0 and volumen<=7):
             self._volumen=volumen
     def getVolumen(self):
         return self._volumen
-    def setNumTV(self, numTV):
+    def setNumTV(numTV):
         TV._numTV=numTV
-    def getNumTV(self):
+    def getNumTV():
         return TV._numTV
     def turnOn(self):
         if self._estado==False:
