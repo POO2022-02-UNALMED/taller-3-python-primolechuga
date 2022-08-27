@@ -1,14 +1,15 @@
-from marca import Marca
-from control import Control
+
 class TV:
-    def __init__(self,marca,estado,control):
+    _numTV=0
+    def __init__(self,marca,estado):
         self._marca=marca
         self._canal=1
         self._precio=500
         self._estado=estado
         self._volumen=1
-        self._control=control
-        self._numTV+=1
+        self._control=None
+        TV._numTV+=1
+        
     
     def setMarca(self, marca):
         self._marca=marca
@@ -34,9 +35,9 @@ class TV:
     def getVolumen(self):
         return self._volumen
     def setNumTV(self, numTV):
-        self._numTV=numTV
+        TV._numTV=numTV
     def getNumTV(self):
-        return self._numTV
+        return TV._numTV
     def turnOn(self):
         if self._estado==False:
             self._estado=True
@@ -53,7 +54,7 @@ class TV:
             if self._canal>1 and self._canal<=120:
                 self._canal-=1
 
-    def volumenUP(self):
+    def volumenUp(self):
         if self._estado==True:
             if self._volumen>=0 and self._volumen<7:
                 self._volumen+=1
